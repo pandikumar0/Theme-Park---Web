@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Get Ready to Booking!</h1>
+    </header>
+ 
+    <section class="box">
+        <img class="sized"src="../Media/user.png" alt="">
+        <img class="sized"src="../Media/family.png" alt="">
+        <img class="sized" src="../Media/technology.png" alt="">
+    </section>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="userName">User Name</label><input type="text" name="usr_name" id="userName" required pattern="[A-Za-z]{4,15}"><br>
+            <label for="phNo">Mobile No</label><input type="tel" name="phone" id="phNo"type="tel" placeholder="xxxxx xxxxx" required pattern="[0-9]{10}"><br>
+            <label for="fName">First Name</label><input type="text" name="f_name" id="fName"required pattern="[A-Za-z]{4,15}">
+            <label for="lName">Last Name</label><input type="text" name="l_name" id="lName" required pattern="[A-Za-z]{4,15}">
+        </fieldset>
+        <fieldset>
+            
+            <legend>Family Members Booking</legend>
+            <div id="member-list">
+                <div>
+                    <input type="number" placeholder="Enter the number of Members" id="member-count">
+                    <button id="member-button">Submit</button>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <Legend>Physical Details</Legend>
+        <label for="height">Height(cm)</label><input type="number" name="height" id="height" required min="80" max="230">
+        <label for="weight">Weight(Kgs)</label><input type="number" name="weight" id="weight" required min="20" max="300">
+        <label for="group">Blood Group:</label>
+        <input type="text"  list="group" required pattern="{2}">
+	<datalist id="group">
+  	<option value="O+">
+  	<option value="B+">
+  	<option value="A+">
+  	<option value="A-">
+  	<option value="B+">
+   </datalist> 
+</fieldset>
+    
+<fieldset>
+    <legend>Privacy Details</legend>
+    <label for="mail">Email-Id:</label>
+    <input type="email" name="mail" id="mail" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"><br>
+    <label for="password">Password</label>  <input type="password" placeholder="L#5M3sF" required minlength="8" name="password" id="password" pattern="[A-Za-z0-9]{8}"/><br>
+    <label for="photo">Profile</label><input type="file" name="photo" id="photo"><br>
+</fieldset>
+
+<fieldset>
+    <legend>
+        Confirmation
+    </legend>
+    <p>All the details here are to share with <b>Astralland</b> to book my tickets. This given details are True from my acknowledgement</p>
+    <button type="submit">Book Now</button>
+    <button type="reset">Cancel</button>
+</fieldset>
+
+ </form>
+<script>
+    $(document).ready(function() {
+        $("#member-button").click(function() {
+            var numbers = document.getElementById("member-count").value;
+            for(var i=0; i<numbers; i++) {
+                $("#member-list").append(`
+                <fieldset>
+                    <legend>Member ${i}</legend>
+                    <label for="p2Name">Full Name</label><input type="text" name="p2_name" id="p2Name" pattern="[A-Za-z]{4,15}"> <br>
+    
+                    <label for="age">Age</label><input type="number" name="age" id="age"  min="5" max="60"><br>
+    
+                    <label for="gender">Gender</label><input type="radio" name="gender" id="gender" value="Male">Male
+                   <input type="radio" name="gender" id="gender" value="Female">Female
+                    <input type="radio" name="gender" id="gender" value="other">others
+                    <br>
+    
+                    <label for="dob">DOB</label><input type="date" name="dob" id="dob">
+            </fieldset>
+                `);
+            }
+        })
+    })
+</script>
+</body>
+</html>

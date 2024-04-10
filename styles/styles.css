@@ -1,0 +1,185 @@
+
+*{
+    margin: 10px 5px 5px 10px;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+body{
+  overflow-x: hidden;
+  background-color: #F7DEFE;
+}
+header h1,nav, section h3{
+  background-color: #333;
+  color:#fff;
+  text-align: center;
+  padding:11px 0;
+  text-transform: uppercase;
+}
+.logo{
+    font-size:30px;
+    color: yellow;
+    text-transform: uppercase;
+    padding: 8px;
+    font-weight: bolder;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    
+}
+.logo:hover{
+  background-color: #555;
+}
+.main-nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px 5px 0px;
+  align-items: center;
+}
+nav a{
+  text-decoration: none;
+  font-size: 18px;
+  color: whitesmoke;
+  padding: 12px 20px;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+nav a:hover{
+  background-color:#555;
+}
+
+footer{
+  background-color: #333;
+  color:#fff;
+  text-align: center;
+  padding: 20px 10px 10px 10px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.home-img{
+  height: 100%;
+  width: 100%;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-section{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 5px;
+}
+.hr{
+  text-align: right;
+  font-size: 50px;
+  padding:10px;
+  text-decoration: underline;
+}
+.hl{
+  text-align: left;
+  font-size: 50px;
+  padding:10px;
+  text-decoration: underline;
+}
+.hc{
+  text-align: center;
+  font-size: 50px;
+  padding:10px;
+  text-decoration: underline;
+}
+.bordered{
+  border-radius: 10px;
+  border: solid;
+  background-color: #eddcf5;
+  padding: 5px;
+  border-color: rgb(165, 177, 246);
+}
+article section p{
+  font-size: 20px;
+}
+
+article h2{
+  text-align: center;
+}
+
+.section-img{
+  width: 60%;
+  height: 70%;
+}
+
+ /* Bookings */
+
+ fieldset button{
+  padding:10px;
+  background-color: #eddcf5;
+  transition: background-color 0.4s;
+  font-size: 20px;
+  text-transform:uppercase ;
+
+ }
+
+ fieldset button:hover{
+  background-color: #555;
+ }
+
+ form{
+  font-size: 20px;
+ }
+
+ fieldset legend{
+  color: blue;
+ }
+ .box{
+  display: flex;
+  flex-wrap: true;
+  justify-content: center;
+ }
+
+.sized{
+  width: 100px;
+  height: 100px;
+}
+/* Timer */
+.box-section{
+  text-align: center;
+}
+.time-display-container{
+  padding:15px;
+  font-size: 25px;
+  text-decoration: bold;
+  border: inset 10px mediumpurple;
+  border-radius: 5px;
+}
+
+/* AJAX*/
+.container-2{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 75%;
+  
+}
+
+.container-items{
+  border-radius: 5px;
+  border:outset 5px;
+  /* border-color: #333; */
+}
+
+.rbutton{
+  background-color: #333;
+  transition: background-color 0.3s;
+  border-radius: 3px;
+  padding:5px;
+  text-transform: capitalize;
+  color: white ;
+}
+.rbutton:hover{
+  background-color: #555;
+}
