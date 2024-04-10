@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AdventureLand Theme Park</title>
+    <h1>About Us</h1>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1{
+            justify-content: center;
+            align-items: center;
+            margin-left: 600px;
+        }
+        header {
+            background-color: #003366;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #003366;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to AdventureLand Theme Park</h1>
+    </header>
+    <section>
+        <h2>Our Mission</h2>
+        <p>At AdventureLand, our mission is simple: to create magical moments that last a lifetime. We are dedicated to providing top-notch entertainment, thrilling rides, and immersive attractions that ignite the imagination and bring joy to every visitor. From the moment you step through our gates, you'll be transported to a world where anything is possible.</p>
+
+        <h2>Experience the Thrill</h2>
+        <p>From heart-pounding roller coasters to whimsical family rides, AdventureLand offers something for everyone. Feel the rush of adrenaline as you soar through the sky on our signature coasters, or take a leisurely stroll through our enchanted gardens. With over [Number] attractions to choose from, the adventure never ends at AdventureLand.</p>
+
+        <h2>Family Fun</h2>
+        <p>AdventureLand is more than just a theme park; it's a place where families come together to create lasting memories. Our kid-friendly attractions and interactive shows ensure that guests of all ages can join in on the fun. Whether you're bonding over a round of mini-golf or exploring our themed play areas, there's no shortage of smiles at AdventureLand.</p>
+
+        <h2>Immerse Yourself</h2>
+        <p>Step into a world of wonder and imagination at AdventureLand. Our immersive themed lands transport you to faraway places, from the depths of the jungle to the outer reaches of space. Explore ancient ruins, encounter mythical creatures, and embark on epic quests as you journey through our one-of-a-kind attractions.</p>
+
+        <h2>Safety First</h2>
+        <p>At AdventureLand, the safety and well-being of our guests are our top priorities. Our team of trained professionals works tirelessly to ensure that every ride and attraction meets the highest safety standards. From rigorous inspections to state-of-the-art safety equipment, you can rest assured that you're in good hands at AdventureLand.</p>
+
+        <h2>Plan Your Visit</h2>
+        <p>Ready to embark on the adventure of a lifetime? Plan your visit to AdventureLand today! Whether you're celebrating a special occasion or just looking for a fun day out, we can't wait to welcome you to our park. Check out our website for ticket information, park hours, and more. We'll see you soon at AdventureLand – where the fun never ends!</p>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('section h2').click(function() {
+                $(this).next('p').slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>
