@@ -4,7 +4,7 @@ package Client;
 import java.util.*;
 
 public class Member {
-    public static int memberId = 123;
+    public int memberId;
     public int ticket_id;
     public String name;
     public int age;

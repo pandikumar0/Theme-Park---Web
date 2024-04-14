@@ -30,5 +30,16 @@
         <pathelement location="/WEB-INF/classes" />
     </classpath>
 
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>Client.AdminServlet</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>

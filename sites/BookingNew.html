@@ -24,7 +24,8 @@
             <legend>Personal Details</legend>
             <label for="mail">Email-Id:</label>
             <input size="50" type="email" name="mail" id="mail" required
-                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"><br>
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+            <label for="date">Booking_Date</label><input type="date" name="date" id="date" required><br>
         </fieldset>
         <fieldset>
 
@@ -57,7 +58,7 @@
                     $("#member-list").append(`
                 <fieldset  style="text-align: center;">
                     <legend>Member ${i}</legend>
-                    <label for="p${i}Name">Full Name</label><input type="text" name="p${i}name" id="p${i}name" pattern="[A-Za-z]{4,15}"> 
+                    <label for="name${i}">Full Name</label><input type="text" name="name${i}" id="name${i}" pattern="[A-Za-z]{4,15}"> 
     
                     <label for="age${i}">Age</label><input type="number" name="age${i}" id="age${i}"  min="5" max="60">
                     <label for="height${i}">Height(cm)</label><input type="number" name="height${i}" id="height${i}" required min="80"
