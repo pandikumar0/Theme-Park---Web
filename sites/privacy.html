@@ -1,30 +1,37 @@
 <!-- Implementation of Ajax Programming -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <script src="../scripts/ajax.js"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./scripts/ajax.js"></script>
     <title>Privacy Policy</title>
 </head>
+
 <body>
     <header>
         <nav>
-    <label class="logo">Astralland</label></nav>
+            <label class="logo">Astralland</label>
+        </nav>
     </header>
     <section>
         <h2 style="text-align: center;">Terms & Conditions</h2>
         <section class="container-2">
-           <section class="container-items">
+            <section class="container-items">
                 <h2>Privacy Policy</h2>
-                <p>At Astralland, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard your information when you visit our website or use our services.</p>
+                <p>At Astralland, we are committed to protecting your privacy and ensuring the security of your personal
+                    information. This Privacy Policy outlines how we collect, use, and safeguard your information when
+                    you visit our website or use our services.</p>
                 <p id="read_more_privacy">...</p>
-                <button  id="read_privacy_btn"class="rbutton" onclick="read_privacy()">Read More</button>
+                <button id="read_privacy_btn" class="rbutton" onclick="read_privacy()">Read More</button>
             </section>
-        <section class="container-items">
+            <section class="container-items">
                 <h2>Terms & Cond</h2>
-                <p>Welcome to Astralland! These Terms and Conditions govern your access to and use of our website and services. By accessing or using our website, you agree to comply with these Terms and Conditions.</p> 
+                <p>Welcome to Astralland! These Terms and Conditions govern your access to and use of our website and
+                    services. By accessing or using our website, you agree to comply with these Terms and Conditions.
+                </p>
                 <p id="read_more_terms">...</p>
                 <button class="rbutton" id="read_terms_btn" onclick="read_terms()">Read More</button>
             </section>
@@ -32,29 +39,30 @@
     </section>
 
     <script>
-        function read_privacy(){
+        function read_privacy() {
             let paraId = "read_more_privacy";
-            let fileURL= "../Media/privacy-policy.txt";
+            let fileURL = "../Media/privacy-policy.txt";
             readAjax(fileURL, paraId);
             let btn = document.getElementById("read_privacy_btn");
-            btn.innerText="DONE";
-            btn.onclick = function(){
+            btn.innerText = "DONE";
+            btn.onclick = function () {
             };
         }
-        function read_terms(){
+        function read_terms() {
             let paraId = "read_more_terms";
-            let fileURL= "../Media/terms-cond.txt";
+            let fileURL = "../Media/terms-cond.txt";
             readAjax(fileURL, paraId);
             let btn = document.getElementById("read_terms_btn");
-            btn.innerText="DONE";
-            btn.onclick = function(){
+            btn.innerText = "DONE";
+            btn.onclick = function () {
             };
         }
     </script>
 
-<footer>
-    <label class="logo">Astralland</label>
-    &copy; Astralland Amusement Park, All rights Reserved 2023-2024.
-</footer>
+    <footer>
+        <label class="logo">Astralland</label>
+        &copy; Astralland Amusement Park, All rights Reserved 2023-2024.
+    </footer>
 </body>
+
 </html>
