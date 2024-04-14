@@ -1,12 +1,15 @@
+
+package Client;
+
 import java.util.*;
 
 public class Member {
-    static int memberId = 123;
-    int ticket_id;
-    String name;
-    int age;
-    double height;
-    String aadhar;
+    public static int memberId = 123;
+    public int ticket_id;
+    public String name;
+    public int age;
+    public double height;
+    public String aadhar;
 
     public void createMember(int ticket_id, String name, int age, double height, String aadhar) {
         this.ticket_id = ticket_id;
