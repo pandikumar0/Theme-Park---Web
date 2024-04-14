@@ -24,9 +24,8 @@ $(document).ready(function () {
     }
   );
 
-  // For Typewriting effect
-
-  // Function to apply typing effect
+  //                   For Typewriting effect
+  //               Function to apply typing effect
   function type(e, txt, i = 0) {
     if (i === 0) {
       e.text("");
@@ -36,36 +35,38 @@ $(document).ready(function () {
     if (i === txt.length - 1) {
       return;
     }
-
     setTimeout(() => type(e, txt, i + 1), 50);
   }
 
-  // Function to handle scroll event
-  function handleScroll() {
-    $("article h2").each(function () {
-      const $h2 = $(this);
+  // Initialize Waypoints Inview
+  $("article h2").waypoint({
+    handler: function (direction) {
+      const $h2 = $(this.element);
 
-      if ($.inViewport($h2) && !$h2.data("typed")) {
+      if (!$h2.data("typed")) {
         const txt = $h2.text();
         type($h2, txt);
         $h2.data("typed", true);
       }
-    });
+
+      // Destroy waypoint after triggering to prevent multiple triggers
+      this.destroy();
+    },
+    offset: "bottom-in-view",
+  });
+
+  //                  Animate Gallery
+  function animateElement(selector, animation_name) {
+    $(selector).waypoint(
+      function () {
+        $(selector).addClass("animate__animated " + animation_name);
+        // setTimeout(() => {
+        //   $(selector).removeClass("animate__animated " + animation_name); }, 1000);
+      },
+      { offset: "bottom-in-view" }
+    );
   }
 
-  // jQuery extension to check if an element is in the viewport
-  $.inViewport = function ($element) {
-    const elementTop = $element.offset().top;
-    const elementBottom = elementTop + $element.outerHeight();
-    const viewportTop = $(window).scrollTop();
-    const viewportBottom = viewportTop + $(window).height();
-
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-  };
-
-  // Add scroll event listener
-  $(window).on("scroll", handleScroll);
-
-  // Initial check on page load
-  handleScroll();
+  animateElement(".section-img", "animate__zoomIn");
+  animateElement(".content-section p", "animate__fadeInLeft");
 });
