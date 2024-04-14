@@ -26,4 +26,9 @@
         Welcome to Tomcat
     </description>
 
+    <classpath>
+        <pathelement location="/WEB-INF/classes" />
+    </classpath>
+
+
 </web-app>
