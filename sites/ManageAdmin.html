@@ -24,24 +24,28 @@
         <tbody id="roleTable"></tbody>
     </table>
     <script>
-        console.log(roles);
-        let content = document.getElementById("roleTable");
-        let id = 1;
-        for (let user in roles) {
-            let pwd = roles[user];
-            let row = `<tr>
-                <th scope="row">${id}</td>
-                <td>${user}</td>
-                <td>${pwd}</td>
-                <td> <button type="button" class="btn btn-primary"
-                onclick="deleteAdmin('${user}')">Delete</button></td>
-                <td> <button type="button" class="btn btn-primary"
-                onclick="changeAdminPassword('${user}')">Change Password</button></td>
-            </tr>`;
-            content.innerHTML += row;
-            id += 1;
-        }
+        $.getJSON("./Data/roles.json", function (data) {
+            roles = data;
+            let content = document.getElementById("roleTable");
+            let id = 1;
+            for (let user in roles) {
+                let pwd = roles[user];
+                let row = `<tr>
+                        <th scope="row">${id}</td>
+                        <td>${user}</td>
+                        <td>${pwd}</td>
+                        <td> <button type="button" class="btn btn-primary"
+                            onclick="deleteAdmin('${user}')">Delete</button></td>
+                        <td> <button type="button" class="btn btn-primary"
+                            onclick="changeAdminPassword('${user}')">Change Password</button></td>
+                    </tr>`;
+                content.innerHTML += row;
+                id += 1;
+            }
+        });
     </script>
+
+    <script src="./scripts/jQuery.js"></script>
 </body>
 
 </html>
