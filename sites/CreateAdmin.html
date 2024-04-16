@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Sign Up</title>
+</head>
+<body>
+    <section class="card">
+        <div class="card-header">
+            <h4>Admin Sign-Up</h4>
+        </div>
+        <section class="card-body">
+            <div class="form-group">
+                <label for="username">Admin Role Name </label>
+                <input type="text" id="username" placeholder="Enter username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Create Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="AdminRequest()">Submit</button>
+        </section>
+        <div class="card-footer" id="result"></div>
+    </section>
+</body>
+</html>

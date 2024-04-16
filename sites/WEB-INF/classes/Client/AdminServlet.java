@@ -25,11 +25,11 @@ public class AdminServlet extends HttpServlet {
                 "}\n" +
                 "</style>\n" +
                 "</head>\n" +
-                "<body>");
+                "<body style=\"text-align:center\">");
 
         out.println("<h2>Booking List</h2>");
         out.println(
-                "<table border='2'><tr><th>TicketId</th><th>Price</th><th>Email</th><th>Booked Date</th><th>Status</th><th>Member Details</th></tr>");
+                "<table border='2' style='margin:auto;'><tr><th>TicketId</th><th>Price</th><th>Email</th><th>Booked Date</th><th>Status</th><th>Member Details</th></tr>");
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

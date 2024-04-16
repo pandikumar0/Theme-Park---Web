@@ -41,7 +41,7 @@
     <script>
         function read_privacy() {
             let paraId = "read_more_privacy";
-            let fileURL = "../Media/privacy-policy.txt";
+            let fileURL = "./Media/privacy-policy.txt";
             readAjax(fileURL, paraId);
             let btn = document.getElementById("read_privacy_btn");
             btn.innerText = "DONE";
@@ -50,7 +50,7 @@
         }
         function read_terms() {
             let paraId = "read_more_terms";
-            let fileURL = "../Media/terms-cond.txt";
+            let fileURL = "./Media/terms-cond.txt";
             readAjax(fileURL, paraId);
             let btn = document.getElementById("read_terms_btn");
             btn.innerText = "DONE";

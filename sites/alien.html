@@ -1,26 +1,23 @@
-Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-Statement stmt = conn.createStatement();
+<!DOCTYPE html>
+<html lang="en">
 
-// Insert into ticket table
-String insertTicketSQL = "INSERT INTO ticket (ticket_id, ticket_price, booking_date, status, email) VALUES ('" + t_id +
-"', " + totalPrice + ", '" + sdf.format(currentDate) + "', 'BOOKED', '" + mail + "')";
-stmt.executeUpdate(insertTicketSQL);
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
 
-// Insert into member table
-for (Member member : MemberList) {
-String insertMemberSQL = "INSERT INTO member (ticket_id, name, age, height, aadhar) VALUES ('" + t_id + "', '" +
-member.name + "', " + member.age + ", " + member.height + ", '" + member.aadhar + "')";
-stmt.executeUpdate(insertMemberSQL);
-}
+<body>
+    <script>
+        window.onload(validateUser());
+        function validateUser() {
+            let username = prompt('Enter User Name: ');
+            let password = prompt('Enter Pass word: ');
+            if (username === 'Admin' && password == 'role_admin'){
+                window.location.href = './admin.'
+            } 
+        }
+    </script>
+</body>
 
-// Close JDBC Connection
-stmt.close();
-conn.close();
-
-
-
-Connection conn = DBConnection.getConnection();
-
-Statement stmt = conn.createStatement();
-String insertTicketSQL = "INSERT INTO ticket (ticket_id, ticket_price, booking_date, status, email) VALUES ('" + t_id +"', " + totalPrice + ", '" + sdf.format(currentDate) + "', 'BOOKED', '" + mail + "')";
-stmt.executeUpdate(insertTicketSQL);
+</html>
