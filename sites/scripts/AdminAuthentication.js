@@ -8,7 +8,7 @@ function validateAdmin() {
     if (roles[username] !== password) {
       res.innerHTML = "For Username, Password is not correct!!";
     } else {
-      window.location.href = "/Astralland/admin";
+      window.location.href = "./Admin.html";
     }
   } else {
     res.innerHTML = "Admin Role not exists!!";
@@ -30,4 +30,23 @@ function createAdmin() {
       window.location.href = "./AdminLogin.html";
     }, 1000);
   }
+}
+
+function deleteAdmin(username) {
+  delete roles[username];
+  window.location.reload();
+}
+
+function changeAdminPassword(username) {
+  let new_pwd = window.prompt("Enter New Password for: " + username);
+  if (new_pwd) {
+    // Check if the user entered a new password
+    roles[username] = new_pwd;
+    alert("Password changed successfully!");
+    window.location.reload();
+  }
+}
+
+function redirectPage(url) {
+  window.location.href = url;
 }

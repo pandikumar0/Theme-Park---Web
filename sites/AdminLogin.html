@@ -33,15 +33,11 @@
                 <input type="password" class="form-control" id="password" name="password" placeholder="Password">
             </div>
             <button type="button" class="btn btn-primary" onclick="validateAdmin()">Login</button>&emsp;
-            <button type="button" class="btn btn-primary" onclick="redirect()">SignUp</button>&emsp;Not a User?
+            <button type="button" class="btn btn-primary"
+                onclick="redirectPage('./CreateAdmin.html')">SignUp</button>&emsp;Not a User?
         </section>
         <div class="card-footer" id="result"></div>
     </section>
-    <script>
-        function redirect() {
-            window.location.href = './CreateAdmin.html';
-        }
-    </script>
 </body>
 
 </html>
