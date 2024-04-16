@@ -15,11 +15,21 @@ public class AdminServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        out.println("<body>");
+        out.println("<head>\n" +
+                "<style>\n" +
+                "table, th, td {\n" +
+                "    border: 1px solid black;\n" +
+                "    border-collapse: collapse;\n" +
+                "    padding: 8px;\n" +
+                "    text-align: left;\n" +
+                "}\n" +
+                "</style>\n" +
+                "</head>\n" +
+                "<body>");
 
         out.println("<h2>Booking List</h2>");
         out.println(
-                "<table border='2'><tr><th>TicketId</th><th>Price</th><th>Email</th><th>Booked Date</th><th>Status</th></tr>");
+                "<table border='2'><tr><th>TicketId</th><th>Price</th><th>Email</th><th>Booked Date</th><th>Status</th><th>Member Details</th></tr>");
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -40,7 +50,7 @@ public class AdminServlet extends HttpServlet {
                 PreparedStatement ps = conn.prepareStatement("Select * from member where member.ticket_id = ?");
                 ps.setInt(1, t_id);
                 ResultSet rs = ps.executeQuery();
-                out.println("<tr><th>Name</th><th>Age</th><th>Height</th><th>aadhar</th><tr/>");
+                out.println("<td><table><tr><th>Name</th><th>Age</th><th>Height</th><th>aadhar</th><tr/>");
                 while (rs.next()) {
                     out.println("<tr>");
                     out.println("<td>" + rs.getString("name") + "</td>");
@@ -49,10 +59,10 @@ public class AdminServlet extends HttpServlet {
                     out.println("<td>" + rs.getString("aadhar") + "</td>");
                     out.println("</tr>");
                 }
-                out.println("</tr>");
+                out.println("</td></table></tr>");
             }
             out.println("</table>");
-            out.println("</body>");
+            out.println("</body></html>");
 
         } catch (Exception e) {
             out.println("Not Responding DB");
